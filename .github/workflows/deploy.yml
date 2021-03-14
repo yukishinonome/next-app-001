@@ -10,19 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: setup credentials
-        run: |
-          echo "$DEPLOY_KEY" > deploy_key
-          chmod 600 deploy_key
-          echo "$KNOWN_HOSTS" > known_hosts
       - name: install packages
         run: yarn install
-      - name: setting git config
-        run: |
-          git remote set-url origin git@github.com:yukishinonome/next-app-001.git
-          git config --global core.sshCommand 'ssh -i "deploy_key" -o UserKnownHostsFile="known_hosts"'
-          git config --global user.email 'yuki.yamakoshi0126@gmail.com' && git config --global user.name 'GitHub Actions'
       - name: build storybook
         run: yarn build-storybook
-      - name: run deploy
-        run: yarn deploy
+      - name: deploy storybook
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: main
+          FOLDER: docs-build
+          CLEAN: true
+          TARGET_FOLDER: docs

@@ -25,6 +25,9 @@
       "yarn format"
     ]
   },
+  "engines": {
+    "npm": "npmではなくyarnを使ってください"
+  },
   "dependencies": {
     "next": "latest",
     "react": "^17.0.1",

@@ -13,7 +13,8 @@
     "test": "jest",
     "test-all": "yarn lint && yarn type-check && yarn test",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy": "gh-pages -d dist"
   },
   "husky": {
     "hooks": {

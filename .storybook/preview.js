@@ -1,7 +1,25 @@
 import * as nextImage from 'next/image'
 
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' }
+  actions: { argTypesRegex: '^on[A-Z].*' },
+  viewport: {
+    viewports: {
+      iphone5S: {
+        name: 'iPhone 5S・SE1',
+        styles: {
+          width: '320px',
+          height: '568px'
+        }
+      },
+      iphone8: {
+        name: 'iPhone 8・SE2',
+        styles: {
+          width: '375px',
+          height: '667px'
+        }
+      }
+    }
+  }
 }
 
 // next/imageそのままだとStorybookで使えないので置き換える

@@ -1,6 +1,7 @@
-# next-app
+# next-storybook-github-actions-deploy
 
-Zennの記事で紹介したコードになります。
+Zennの記事で紹介したコードになります。  
+https://zenn.dev/yukishinonome/articles/bfb4a79a4b81b0
 
 ## セットアップ内容
 

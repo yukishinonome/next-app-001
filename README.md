@@ -18,6 +18,11 @@ https://zenn.dev/yukishinonome/articles/bfb4a79a4b81b0
 
 ## NextJS Typescript Boilerplate
 
+https://github.com/vercel/next.js/tree/master/examples/with-typescript-eslint-jest
+
+Copyright (c) 2021 Vercel, Inc.  
+https://github.com/vercel/next.js/blob/canary/license.md
+
 Bootstrap a developer-friendly NextJS app configured with:
 
 - [Typescript](https://www.typescriptlang.org/)
